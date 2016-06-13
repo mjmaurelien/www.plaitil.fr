@@ -1,0 +1,54 @@
+.widow{
+  height:100%;
+  padding:20px;
+}
+
+.visu_tow{
+  .petit_visu{
+    margin:10px;
+    position:relative;
+    overflow:hidden;
+  }
+  .detail{
+    width:100%;
+    display:block;
+    position:absolute;
+    top:-100%;
+    left:0;
+    height:100%;
+    background-color:black;
+    opacity:0.8;
+    transition:0.5s;
+    padding:10px 10px;
+    text-align:center;
+    .etoile{
+      margin: auto auto;
+      i{
+        text-decoration:none;
+        color:white;
+      }
+    }
+    .btndetail{
+      background:transparent;
+      color:white;
+      border:1px solid white;
+      margin:auto auto;
+      &:hover{
+        background:white;
+        color:black;
+      }
+    }
+    p{
+      margin: 0px auto 10px auto;
+      color:white;
+      text-align:center;
+      display:block;
+      border-bottom:1px dotted white;
+      text-align:center;
+      line-height:30px;
+    }
+    img{
+      text-align:center;
+    }
+  }
+}

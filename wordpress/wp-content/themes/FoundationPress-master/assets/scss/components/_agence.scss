@@ -1,0 +1,57 @@
+.agence{
+  h1{
+font-family: 'Open+Sans', sans-serif;
+font-weight:800;
+font-size: 4.7em;
+text-transform:uppercase;
+color:#FF6600;
+text-align:left;
+}
+h2{
+font-family: 'Open+Sans', sans-serif;
+font-weight:800;
+font-size: 1.875em;
+color:#000000;
+text-align:left;
+}
+p{
+  font-family: 'Kurale', sans-serif;
+  font-size: 1.5em;
+  color:#000000;
+  text-align:left;
+}
+hr{
+  width:85px;
+  height:3px;
+  color:#089de3;
+  background-color: #089de3;
+  border:none;
+  margin-left:0px;
+}
+a{
+  text-decoration:none;
+  background:none;
+  border:1px solid #FF6600;
+  color:#FF6600;
+  transition:0.5s;
+  font-family: 'Kurale', sans-serif;
+  font-size: 1.2em;
+  &:hover{
+    background:#FF6600;
+    color:#FFFFFF;
+    transition:0.5s;
+  }
+}
+.img{
+  background:red;
+  background-image: url(../images/_img/fullimage2.jpg);
+  width:100%;
+  height:300%;
+  display:block;
+}
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
