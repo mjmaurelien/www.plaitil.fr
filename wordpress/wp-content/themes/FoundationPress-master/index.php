@@ -94,12 +94,12 @@ get_header(); ?>
 
 
            <div class="item" data-hash="<?php the_ID() ?>">
-             <div class="large-6 small-6 columns visu_one">
+             <div class="large-6 small-12 columns visu_one">
                <div class="visu">
                  <img src="<?php echo $url ?>" alt=""/>
                </div>
              </div>
-             <div class="large-6 small-6 columns texte">
+             <div class="large-6 small-12 columns texte">
                <h2><?php the_title(); ?></h2>
                <hr>
                <div class="">
