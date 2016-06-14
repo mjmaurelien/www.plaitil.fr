@@ -15,23 +15,37 @@
 
 get_header(); ?>
 
-<div id="owl-demo" class="owl-carousel owl-theme">
-
-  <div class="item">
-    <img src="assets/images/fullimage1" alt="GTA V">
+<div id="owl-carousel2" class="owl-carousel owl-theme">
+  <div class="item bloc-center" >
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/fullimage2.jpg" alt="GTA V">
+    <div class="in hide-for-small-only">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/logo.png" alt=""/></a>
+      <h2>Titre du projet</h2>
+      <a href="#" class="button small-12 large-4 columns">voir le projet</a>
+    </div>
   </div>
-  <div class="item">
-    <img src="assets/images/fullimage2" alt="GTA V">
+  <div class="item bloc-center" >
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/fullimage3.jpg" alt="GTA V">
+    <div class="in hide-for-small-only">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo hide-for-small-only"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/logo.png" alt=""/></a>
+      <h2 class="hide-for-small-only">Titre du projet</h2>
+      <a href="#" class="button small-12 large-4 columns">voir le projet</a>
+    </div>
   </div>
-  <div class="item">
-  <img src="<?= _URL_IMAGES; ?>/_img/fullimage1.jpg" alt=""/>
+  <div class="item bloc-center" >
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/fullimage1.jpg" alt="GTA V">
+    <div class="in hide-for-small-only">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo hide-for-small-only"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/logo.png" alt=""/></a>
+      <h2 class="hide-for-small-only">Vous avez un projet en tête ?</h2>
+      <a href="#contact" class="button small-12 large-4 columns">contactez nous</a>
+    </div>
   </div>
 
 </div>
 
 	<article class="row agence">
-		<div class="small-12 large-6 columns img">
-			<img src="<?= _URL_IMAGES; ?>/_img/fullimage1.jpg" alt="">
+		<div class="small-12 large-6 columns text-center img responsive">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/images.jpg" alt="GTA V">
 		</div>
 		<div class="small-12 large-6 columns">
 			<h1>Agence «Plait-il ?»</h1>
@@ -44,7 +58,7 @@ get_header(); ?>
 			</p>
       <div class="row">
       <a href="#" class="button small-12 large-5 columns">Projets</a>
-      <a href="#" class="button small-12 large-5 columns">Contact</a>
+      <a href="#contact" class="button small-12 large-5 columns">Contact</a>
     </div>
 		</div>
 	</article>
@@ -66,25 +80,28 @@ get_header(); ?>
 				 </p>
        </div>
      </div>
-       <div class="row">
+       <div class="row slide_projet">
          <div class="small-12 large-8 columns visuel owl-carousel " id="owl-carousel">
 
            <?php
-             $args = array( 'post_type' => 'product', 'stock' => 1,'product_cat' =>'', 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+             $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 5, 'orderby' =>'date','order' => 'DESC' );
              $loop = new WP_Query( $args );
-             while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+             while ( $loop->have_posts() ) : $loop->the_post();
              $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
              $url = $thumb['0'];
            ?>
 
-           <div class="item" data-hash="<?php echo $product->id ?>">
+
+
+           <div class="item" data-hash="<?php the_ID() ?>">
              <div class="large-6 small-6 columns visu_one">
                <div class="visu">
                  <img src="<?php echo $url ?>" alt=""/>
                </div>
              </div>
              <div class="large-6 small-6 columns texte">
-               <h2><? the_title() ?></h2>
+               <h2><?php the_title(); ?></h2>
+               <hr>
                <div class="">
                  <?php echo the_excerpt() ?>
                </div>
@@ -98,31 +115,24 @@ get_header(); ?>
          <?php wp_reset_query(); ?>
          </div>
 
-       <div class="small-12 large-4 columns">
+       <div class="small-12 large-4 columns ">
          <div class="row">
 
            <?php
-             $args = array( 'post_type' => 'product', 'stock' => 1,'product_cat' => 'recommandation', 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+             $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 5, 'orderby' =>'date','order' => 'DESC' );
              $loop = new WP_Query( $args );
-             while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+             while ( $loop->have_posts() ) : $loop->the_post();
              $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
              $url = $thumb['0'];
            ?>
 
-           <div class=" large-6 small-6 columns visu_tow">
+           <div class=" large-6 small-6 columns visu_tow no-gutter">
              <div class="petit_visu">
-               <a href="#<?php echo $product->id ?>">
+               <a href="#<?php the_ID() ?>">
                  <div class="detail">
-                   <div class="etoile">
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star-o" aria-hidden="true"></i>
-                   </div>
-                   <p>Excellent état</p>
-                   <p>Disponible</p>
-                   <a href="#<?php echo $product->id ?>" class="expanded button btndetail">Voir plus</a>
+                   <h2><?php the_title(); ?></h2>
+                   <hr>
+                   <a href="#<?php the_ID() ?>" class="expanded button btndetail">Voir plus</a>
                  </div>
                </a>
                <img src="<?php echo $url ?>" alt=""/>
@@ -137,7 +147,7 @@ get_header(); ?>
    </section>
  </article>
 
- <article class="row">
+ <article id="contact" class="row">
    <section class="widow contact">
        <h1>Nous contacter</h1>
          <h2>Ne soyez pas timide !</h2>

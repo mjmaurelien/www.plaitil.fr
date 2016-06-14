@@ -2,10 +2,23 @@
   height:100%;
   padding:20px;
 }
-
+.slide_projet{
+  margin-top:100px;
+  h2{
+    font-size:24px;
+    font-family:'Kurale', serif;
+    margin: 10px auto 10px auto;
+    color:black;
+    text-align:center;
+    display:block;
+    text-align:center;
+    line-height:30px;
+  }
+}
 .visu_tow{
+  padding:0px;
   .petit_visu{
-    margin:10px;
+    margin:0px;
     position:relative;
     overflow:hidden;
   }
@@ -21,31 +34,28 @@
     transition:0.5s;
     padding:10px 10px;
     text-align:center;
-    .etoile{
-      margin: auto auto;
-      i{
-        text-decoration:none;
+    .btndetail{
+      background:transparent;
+      color:#FFFFFF;
+      border:1px solid #FF6600;
+      margin:auto auto;
+      &:hover{
+        background:#FF6600;
         color:white;
       }
     }
-    .btndetail{
-      background:transparent;
-      color:white;
-      border:1px solid white;
-      margin:auto auto;
-      &:hover{
-        background:white;
-        color:black;
-      }
-    }
-    p{
-      margin: 0px auto 10px auto;
+    h2{
+      font-size:18px;
+      font-family:'Kurale', serif;
+      margin: 10px auto 0px auto;
       color:white;
       text-align:center;
       display:block;
-      border-bottom:1px dotted white;
       text-align:center;
       line-height:30px;
+    }
+    hr{
+      margin:0px auto 45px auto;
     }
     img{
       text-align:center;

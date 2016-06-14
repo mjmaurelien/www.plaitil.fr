@@ -1,0 +1,35 @@
+aside{
+  width:100%;
+  h6{
+    font-family: 'Kurale', sans-serif;
+    font-size: 1.5em;
+    color:#FF6600;
+    text-align:left;
+    border-bottom:1px solid #FF6600;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      font-family: 'Kurale', sans-serif;
+      font-size: 1.2em;
+      color:#000000;
+      text-align:left;
+    }
+  }
+
+    a{
+      text-decoration:none;
+      background:none;
+      border:1px solid #FF6600;
+      color:#FF6600;
+      transition:0.5s;
+      font-family: 'Kurale', sans-serif;
+      font-size: 1.2em;
+      &:hover{
+        background:#FF6600;
+        color:#FFFFFF;
+        transition:0.5s;
+      }
+    }
+
+}

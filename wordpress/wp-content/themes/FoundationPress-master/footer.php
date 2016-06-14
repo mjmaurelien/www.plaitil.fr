@@ -21,60 +21,32 @@
 			</footer>
 		</div>
 		<div id="footer">
-		  <div id="assurance" >
+			<div id="basfooter">
 		    <div id="page-full-width">
-		      <div class="row">
-		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/livraison.png" alt=""/>
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		        </div>
-		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/qualite.png" alt=""/>
-		           <p>AUTHENTICITÉ ET TRAÇABILITÉ DES PRODUITS</p>
-		        </div>
-		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/garantie.png" alt=""/>
-		           <p>GARANTIE MINIMUM D’UN AN</p>
-		        </div>
-		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/sansfrai.png" alt=""/>
-		           <p>PAIEMENT EN PLUSIEURS FOIS SANS FRAIS</p>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		  <div id="basfooter" >
-		    <div id="page-full-width">
-		      <div class="row">
-		        <div class="small-12 large-12 columns news">
-		          <a href="#" class="large-12 small-12 hvr-reveal2">s'abonner à la newsletter</a>
-		        </div>
-		      </div>
 		      <div class="row lien_footer">
-		        <div class="small-12 large-4 columns reso">
-								<a href="http://localhost/www.orologi.fr/wordpress/?post_type=product"><p>Boutique</p></a>
-		           	<a href="http://localhost/www.orologi.fr/wordpress/?page_id=133"><p>Contact</p></a>
-		           	<a href="http://localhost/www.orologi.fr/wordpress/?page_id=133"><p>A propos</p></a>
-								<a href="http://localhost/www.orologi.fr/wordpress/?page_id=133"><p>Garanties</p></a>
+		        <div class="small-12 large-3 columns reso">
+								<p>
+									<i class="fa fa-copyright" aria-hidden="true"></i>Plait-il ? | 2016
+								</p>
 		        </div>
-		        <div class="small-12 large-4 columns reso">
-		          <a href="http://localhost/www.orologi.fr/wordpress/index.php/?page_id=62"><p>Marques</p></a>
-		          <a href="http://localhost/www.orologi.fr/wordpress/?page_id=60"><p>Bracelets</p></a>
-		          <a href="http://localhost/www.orologi.fr/wordpress/?page_id=66"><p>Nouveautés</p></a>
-							<p>
-			           <a href="#" class="animationrotate"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-			           <a href="#" class="animationrotate"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-			           <a href="#" class="animationrotate"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
-			           <a href="#" class="animationrotate"><i class="fa fa-instagram" ></i></a>
-			        </p>
+		        <div class="small-12 large-3 columns reso">
+		          <p>
+		          	<i class="fa fa-map-marker" aria-hidden="true"></i>Plait-il ?<br><a href="https://www.google.fr/maps/search/5+rue+du+B%C3%BBcher,+13007+Marseille/@43.2806818,5.3610179,13z/data=!3m1!4b1"target="_blank"> 5 rue du Bûcher, 13007 Marseille</a>
+		          </p>
 		        </div>
-						<div class="small-12 large-4 columns reso">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4779.068620464316!2d7.7406640503890705!3d48.5850383485375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xed78782525eaaaa8!2sPlace+des+Montres!5e0!3m2!1sfr!2sfr!4v1465311149866" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<div class="small-12 large-3 columns reso">
+							<a href="#">Mentions légales</a>
+		        </div>
+						<div class="small-12 large-3 columns reso">
+								<a href="#" class="animationrotate"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+			          <a href="#" class="animationrotate"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+			          <a href="#" class="animationrotate"><i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i></a>
+			          <a href="#" class="animationrotate"><i class="fa fa-instagram fa-2x" ></i></a>
 		        </div>
 		      </div>
 		    </div>
-		  </div>
 		</div>
+	</div>
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>
 
@@ -138,7 +110,7 @@ $('#owl-carousel2').owlCarousel({
 	            items:1
 	        },
 	        600:{
-	            items:3
+	            items:1
 	        },
 	        1000:{
 	            items:1
@@ -176,8 +148,26 @@ if ( $( ".entry-summary" ).length ) {
 	$('.row .small-12').removeClass('large-8')
 
 }
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
 </script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-576010c4b2b36d1a"></script>
+
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>

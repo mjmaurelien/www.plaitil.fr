@@ -8,8 +8,9 @@
 }
 /* Reveal */
 .hvr-reveal {
+  color:#FF6600;
   background:none;
-  border:1px solid #f5deb3;
+  border:1px solid #FF6600;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -22,12 +23,12 @@
   overflow: hidden;
   &:hover{
     color:#fff !important;
-    background:#F5DEB3 !important;
-    border:1px solid #F5DEB3!important;
+    background:#FF6600 !important;
+    border:1px solid #FF6600!important;
   }
 }
 .hvr-reveal:before {
-  color:#F5DEB3;
+  color:#FF6600;
   content: "";
   position: absolute;
   z-index: -1;
@@ -35,7 +36,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border-color: #F5DEB3;
+  border-color: #FF6600;
   border-style: solid;
   border-width: 0;
   -webkit-transition-property: border-width;
@@ -49,4 +50,6 @@
   -webkit-transform: translateY(0);
   transform: translateY(0);
   border-width: 2px;
+  color:#FFFFFF;
+  background:#FF6600
 }
