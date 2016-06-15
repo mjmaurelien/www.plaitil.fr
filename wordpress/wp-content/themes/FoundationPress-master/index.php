@@ -14,22 +14,21 @@
  */
 
 get_header(); ?>
-
-<div id="owl-carousel2" class="owl-carousel owl-theme">
+<div id="owl-carousel2" class="owl-carousel owl-theme hide-for-small-only">
   <div class="item bloc-center" >
     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/fullimage2.jpg" alt="GTA V">
     <div class="in hide-for-small-only">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/logo.png" alt=""/></a>
-      <h2>Titre du projet</h2>
-      <a href="#" class="button small-12 large-4 columns">voir le projet</a>
+      <h2>Swag 2015</h2>
+      <a href="http://localhost/www.plaitil.fr/wordpress/portfolio/oeuvre-1/" class="button small-12 large-4 columns">voir le projet</a>
     </div>
   </div>
   <div class="item bloc-center" >
     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/fullimage3.jpg" alt="GTA V">
     <div class="in hide-for-small-only">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo hide-for-small-only"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/logo.png" alt=""/></a>
-      <h2 class="hide-for-small-only">Titre du projet</h2>
-      <a href="#" class="button small-12 large-4 columns">voir le projet</a>
+      <h2 class="hide-for-small-only">Bruno Saunier</h2>
+      <a href="http://localhost/www.plaitil.fr/wordpress/portfolio/oeuvre-4/" class="button small-12 large-4 columns">voir le projet</a>
     </div>
   </div>
   <div class="item bloc-center" >
@@ -43,7 +42,7 @@ get_header(); ?>
 
 </div>
 
-	<article class="row agence">
+	<article class="row agence" id="agence">
 		<div class="small-12 large-6 columns text-center img responsive">
 			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/_img/images.jpg" alt="GTA V">
 		</div>
@@ -65,7 +64,7 @@ get_header(); ?>
 
 
 
- <article class="gris">
+ <article class="gris" id="projets">
    <!-- RECOMMANDATION
    ======================== -->
 

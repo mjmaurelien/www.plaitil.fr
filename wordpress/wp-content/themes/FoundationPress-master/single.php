@@ -9,7 +9,27 @@
 get_header(); ?>
 
 <div id="page-full-width" role="main" class="projets_page">
+<div class="row">
+	<div class="small-12 large-6 text-center columns cara">
+		<p>
+			<?php echo the_category('|'); ?>
+		</p>
+		<p><?php echo get_field('date'); ?></p>
+		<img src="<?php echo get_field('image_projet'); ?>" alt="" />
+		<img src="<?php echo get_field('image_projet_2'); ?>" alt="" />
+		<img src="<?php echo get_field('image_projet_3'); ?>" alt="" />
+	</div>
+	<div class="small-12 large-6 text-center columns cara">
+		<p>
+			<?php echo the_category('|'); ?>
+		</p>
+		<p><?php echo get_field('date'); ?></p>
+		<img src="<?php echo get_field('image_projet'); ?>" alt="" />
+		<img src="<?php echo get_field('image_projet_2'); ?>" alt="" />
+		<img src="<?php echo get_field('image_projet_3'); ?>" alt="" />
+	</div>
 
+</div>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">

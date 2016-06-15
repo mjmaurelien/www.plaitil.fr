@@ -19,6 +19,24 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<article id="header">
+		  <section>
+		    <div class="toggleMenu">
+		      <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+		    </div>
+				<a href="http://localhost/www.plaitil.fr/wordpress/">
+					<div class='logo_header'>
+		    </div>
+			</a>
+		  </section>
+		  <nav id="navigation">
+		  <ul>
+		    <li><a href="#agence" onClick="window.location.reload()">agence</a></li>
+		    <li><a href="#projets" onClick="window.location.reload()">projets</a></li>
+		    <li><a href="#contact" onClick="window.location.reload()">contact</a></li>
+			</ul>
+		</nav>
+		</article>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
@@ -29,7 +47,7 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
+	<!--<header id="masthead" class="site-header" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 			<div class="title-bar-title">
@@ -60,7 +78,7 @@
 				<?php endif; ?>
 			</div>
 		</nav>
-	</header>
+	</header>-->
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' );

@@ -162,7 +162,9 @@ $(function() {
     }
   });
 });
-
+$('.toggleMenu').click(function(){
+  $('#header #navigation').slideToggle();
+})
 </script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->

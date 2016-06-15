@@ -1,6 +1,6 @@
 .projets_page{
   h2,p{
-  text-align:left !important;
+  text-align:left ;
   }
   h3{
     font-family:'Open+sans',sans-serif;
@@ -40,7 +40,11 @@
         display:block;
         text-align:left !important;
       }
-
+      .cara{
+        p{
+          text-align:center;
+        }
+      }
 }
 #respond{
 form{
